@@ -33,9 +33,7 @@ public final class ImmutableStack<T> implements Stack<T>{
 	
 	private static final class EmptyStack<T> implements Stack<T>{
 		
-		@SuppressWarnings("rawtypes")
-		private final static EmptyStack emptyStack = new EmptyStack();
-		
+
 		//  #Removes the element at the beginning of the immutable queue, and returns the new queue.
 		@SuppressWarnings("rawtypes")
 		public final static EmptyStack getInstance(){
@@ -57,5 +55,9 @@ public final class ImmutableStack<T> implements Stack<T>{
 		public final boolean isEmpty(){
 			return true;
 		}
+		
+		@SuppressWarnings("rawtypes")
+		private final static EmptyStack emptyStack = new EmptyStack();
+		
 	}
 } 

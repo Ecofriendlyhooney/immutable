@@ -54,9 +54,6 @@ public final class ImmutableQueue<T> implements Queue<T>{
 	private static final class EmptyQueue<T> implements Queue<T>{ 
 		
 		@SuppressWarnings("rawtypes")
-		private final static EmptyQueue emptyQueue = new EmptyQueue();
-		
-		@SuppressWarnings("rawtypes")
 		public final static EmptyQueue getInstance(){
 			return emptyQueue;
 		}
@@ -77,5 +74,9 @@ public final class ImmutableQueue<T> implements Queue<T>{
 		public final boolean isEmpty(){
 			return true;
 		}
+		
+		@SuppressWarnings("rawtypes")
+		private final static EmptyQueue emptyQueue = new EmptyQueue();
+		
 	}
 }
